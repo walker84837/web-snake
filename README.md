@@ -13,17 +13,19 @@ A simple snake game implemented in TypeScript, compiled to JavaScript. This proj
 ## Known Issues
 
 - The snake may occasionally overlap with itself in certain cases.
-- There isn't any pause-resume features.
+- There aren't any pause-resume features.
 - The canvas isn't aligned with the snake's dimensions.
 - On small screens, the canvas may be too tall to be visible all at once.
 - There are no comfort features.
 - There is no score & high score counter.
+- There is no game-over screen.
+- The when moving down or up, the view is moved down or up, making gameplay more uncomfortable.
 
 ## What's different?
 
-- This snake game implementation introduces responsive design, allowing the game to adapt to different screen sizes.
-- The game supports arrow key controls for basic controls.
-- The project is **originally** written in TypeScript (I'm planning on rewriting the TypeScript code, and recompiling the JS script) for improved code organization and type safety.
+- This snake game implementation introduces a responsive design, allowing the game to adapt to different screen sizes.
+- The game supports arrow key controls for essential controls.
+- The project is **originally** written in TypeScript (I plan on rewriting the TypeScript code and recompiling the JS script) for improved code organization and type safety.
 
 ## Getting Started
 
@@ -35,7 +37,7 @@ To run the game locally, follow these steps:
 
 ## Contributing
 
-Contributions are welcome! If you have any ideas for improvements or bug fixes, feel free to create pull requests and issues. Make sure to follow the existing code style and add relevant tests for your changes.
+Contributions are welcome! Feel free to create pull requests and issues if you have any ideas for improvements or bug fixes. Make sure to follow the existing code style and add relevant tests for your changes.
 
 ## License
 
