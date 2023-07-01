@@ -1,6 +1,6 @@
 # web-snake
 
-A simple snake game implemented in TypeScript, compiled to JavaScript. This project contains a basic implementation of the classic snake game using HTML5 canvas and JavaScript, and CSS for styling. The game allows the player to control a snake, eat food, and grow longer. The goal is to achieve the highest score possible without colliding with the boundaries or the snake's own body.
+A simple snake game implemented in TypeScript, compiled to JavaScript. This project contains a basic implementation of the classic snake game using HTML5 canvas and JavaScript, and CSS for styling.
 
 ## Features
 
@@ -15,8 +15,7 @@ A simple snake game implemented in TypeScript, compiled to JavaScript. This proj
 - The snake may occasionally overlap with itself in certain cases.
 - There aren't any pause-resume features.
 - The canvas isn't aligned with the snake's dimensions.
-- On small screens, the canvas may be too tall to be visible all at once.
-- There are no comfort features.
+- There are no comfort features, like pressing two arrows at the same time, which would move the snake diagonally.
 - There is no score & high score counter.
 - There is no game-over screen.
 - The when moving down or up, the view is moved down or up, making gameplay more uncomfortable.
