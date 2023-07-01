@@ -1,14 +1,12 @@
-// Inizializzazione
-let canvas = document.createElement("canvas");
+let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 let main = document.querySelector("main");
-main.appendChild(canvas);
-// Costanti
+
 let BLACK = "#403212";
 let GREEN = "#C7AB00";
 let RED = "#FF7f00";
 let FPS = 13;
-// Funzioni
+
 function drawSnake(snakeList) {
   for (let _i = 0, snakeList_1 = snakeList; _i < snakeList_1.length; _i++) {
     let block = snakeList_1[_i];
@@ -16,7 +14,7 @@ function drawSnake(snakeList) {
     ctx.fillRect(block[0], block[1], 20, 20);
   }
 }
-// letiabili
+
 let snakeX = 0;
 let snakeY = 0;
 let snakeList = [[snakeX, snakeY]];
@@ -35,7 +33,7 @@ document.addEventListener("keydown", function (event) {
     direction = "down";
   }
 });
-// Resize canvas to fit the available space
+
 function resizeCanvas() {
   canvas.width = main.clientWidth;
   canvas.height = main.clientHeight;
@@ -44,13 +42,13 @@ function resizeCanvas() {
 }
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
-// Loop di gioco
+
 let game_over = false;
 function gameLoop() {
   if (game_over) {
     return;
   }
-  // Aggiornamento serpente
+
   if (direction === "down") {
     snakeY += 20;
   } else if (direction === "left") {
@@ -64,12 +62,13 @@ function gameLoop() {
   if (snakeList.length > snakeLength) {
     snakeList.shift();
   }
-  // Gestione collisioni
+ 
   if (snakeX === foodX && snakeY === foodY) {
     foodX = Math.floor((Math.random() * (canvas.width - 20)) / 20) * 20;
     foodY = Math.floor((Math.random() * (canvas.height - 20)) / 20) * 20;
     snakeLength += 1;
   }
+// TODO: MAKE SNAKE APPEAR TO THE OTHER SIDE OF THE CANVAS
   if (
     snakeX < 0 ||
     snakeX > canvas.width - 20 ||
