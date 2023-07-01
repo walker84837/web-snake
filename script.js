@@ -83,14 +83,14 @@ function gameLoop() {
       game_over = true;
     }
   }
-  // Disegno
+
   ctx.fillStyle = BLACK;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   drawSnake(snakeList);
   ctx.fillStyle = RED;
   ctx.fillRect(foodX, foodY, 20, 20);
-  // FPS
+
   setTimeout(gameLoop, 1000 / FPS);
 }
-// Avvio del gioco
+
 gameLoop();
